@@ -1,85 +1,102 @@
-ts-fullstack-lab
+# ts-fullstack-lab
 
-This repository is a full-stack TypeScript development scaffold using modern tools and frameworks. It combines a backend built with NestJS, a frontend built with React and Vite, and OpenSearch for data storage and querying.
+This repository provides a full-stack TypeScript development scaffold utilizing modern tools and frameworks. It integrates a backend built with NestJS, a frontend developed with React and Vite, and OpenSearch for data storage and querying.
 
-The setup is designed with modular TypeScript configuration, development tooling, and clear structure to support building and testing scalable applications.
+The setup emphasizes modular TypeScript configuration, robust development tooling, and a clear project structure to facilitate the building and testing of scalable applications.
 
-🔧 Stack Overview
+---
 
-Backend: NestJS (TypeScript, Node.js)
+## 🔧 Stack Overview
 
-Frontend: React + Vite (TypeScript)
+-   **Backend**: NestJS (TypeScript, Node.js)
+-   **Frontend**: React + Vite (TypeScript)
+-   **Search Engine**: OpenSearch (local via Docker)
+-   **TypeScript Config**: NodeNext module system
+-   **Linting & Formatting**: ESLint with Flat Config + Prettier
 
-Search Engine: OpenSearch (local via Docker)
+---
 
-TypeScript Config: NodeNext module system
+## 📁 Project Structure
 
-Linting & Formatting: ESLint with Flat Config + Prettier
-
-📁 Project Structure
-
+```
 ts-fullstack-lab/
 ├── backend/             # NestJS app with TypeScript
 ├── frontend/            # React + Vite app with TypeScript
 ├── tsconfig.base.json   # Shared TypeScript config
 ├── docker-compose.yml   # OpenSearch dev setup
 └── days/                # Day-by-day progress documentation
-
-📚 Documentation by Day
-
-Each day of work is documented in the days/ folder with its own README file.
-
-days/day0/README.md: Project initialization, backend/frontend scaffolding, and OpenSearch setup.
-
-📦 Getting Started
-
-Clone the repository and install dependencies in both frontend and backend folders:
-```bash
-git clone <your-repo-url>
-cd ts-fullstack-lab
-cd backend && npm install
-cd ../frontend && npm install
 ```
-To run the OpenSearch service:
-```bash
-docker compose up -d
-```
-To start development servers:
-```bash
-# In backend
-npm run start:dev
 
-# In frontend
-npm run start:dev
-```
-🔐 Notes
+---
 
-OpenSearch is configured with security enabled and basic auth (dev-only).
+## 📚 Documentation by Day
 
-rejectUnauthorized: false is used to allow self-signed certs in local development.
+Each day of work is documented in the `days/` folder with its own README file.
 
-ESLint rules are relaxed in specific files to accommodate integration edge cases.
+-   [`days/day0/README.md`](ts-fullstack-lab/days/DAY0.md): Project initialization, backend/frontend scaffolding, and OpenSearch setup.
 
-📌 Goals
+---
 
-This project provides a clean environment to:
+## 📦 Getting Started
 
-Learn TypeScript in both backend and frontend contexts.
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd ts-fullstack-lab
+    ```
 
-Practice building and connecting REST APIs.
+2.  **Install dependencies:**
+    Navigate to both `backend` and `frontend` directories and install their respective dependencies:
+    ```bash
+    cd backend
+    npm install
+    cd ../frontend
+    npm install
+    cd .. # Return to project root
+    ```
 
-Understand tooling like Vite, NestJS, Docker, and OpenSearch.
+3.  **Run OpenSearch service:**
+    ```bash
+    docker compose up -d
+    ```
 
-Each day I can build on what I learn.
+4.  **Start development servers:**
+    -   In the `backend` directory:
+        ```bash
+        npm run start:dev
+        ```
+    -   In the `frontend` directory:
+        ```bash
+        npm run start:dev
+        ```
 
-📬 Feedback & Iteration
+---
 
-This repository is a work in progress. Future improvements may include:
+## 🔐 Notes
 
-Unit and integration testing setup
+-   OpenSearch is configured with security enabled and basic authentication (intended for development environments only).
+-   `rejectUnauthorized: false` is used to allow self-signed certificates during local development.
+-   ESLint rules are relaxed in specific files to accommodate integration edge cases.
 
-Advanced API design
+---
 
-OpenSearch queries and mappings
+## 📌 Goals
 
-See individual progression/dayX.md files for detailed task documentation.
+This project serves as a clean environment to:
+
+-   Learn and apply TypeScript in both backend and frontend contexts.
+-   Practice building and connecting REST APIs.
+-   Gain familiarity with tools such as Vite, NestJS, Docker, and OpenSearch.
+-   Incrementally build upon knowledge gained each day.
+
+---
+
+## 📬 Feedback & Iteration
+
+This repository is an ongoing work in progress. Future improvements may include:
+
+-   Comprehensive unit and integration testing setup.
+-   Advanced API design patterns.
+-   Detailed OpenSearch queries and mappings.
+
+For detailed task documentation, please refer to the individual `progression/dayX.md` files.
