@@ -1,70 +1,85 @@
-# TS-Fullstack-Lab
+ts-fullstack-lab
 
-Mono-repo playground built with:
+This repository is a full-stack TypeScript development scaffold using modern tools and frameworks. It combines a backend built with NestJS, a frontend built with React and Vite, and OpenSearch for data storage and querying.
 
-| Layer | Tech |
-|-------|------|
-| **Backend** | NestJS + TypeScript (`ts-node-dev`) |
-| **Search**  | OpenSearch 2.13 (Docker) |
-| **Frontend**| Vite 6 + React 19 (TypeScript) |
-| **Tooling** | Strict TS 5.8 • ESLint + Prettier |
+The setup is designed with modular TypeScript configuration, development tooling, and clear structure to support building and testing scalable applications.
 
----
+🔧 Stack Overview
 
-## 5-Day Roadmap
+Backend: NestJS (TypeScript, Node.js)
 
-| Day | Focus | Deliverables |
-|-----|-------|--------------|
-| **0** | Environment & Scaffolding | Running API, UI, OpenSearch |
-| **1** | TypeScript Fundamentals | CLI utils, unit tests |
-| **2** | Advanced Types | Generic helpers, error handling |
-| **3** | Full-stack Integration | Shared DTOs, search endpoint, typed React hook |
-| **4** | Final Polish | Build scripts, container images, docs |
+Frontend: React + Vite (TypeScript)
 
-(Directories for Days 1-4 start empty and will be filled as work progresses.)
+Search Engine: OpenSearch (local via Docker)
 
----
+TypeScript Config: NodeNext module system
 
-## Quick Start (Day 0)
+Linting & Formatting: ESLint with Flat Config + Prettier
 
+📁 Project Structure
+
+ts-fullstack-lab/
+├── backend/             # NestJS app with TypeScript
+├── frontend/            # React + Vite app with TypeScript
+├── tsconfig.base.json   # Shared TypeScript config
+├── docker-compose.yml   # OpenSearch dev setup
+└── days/                # Day-by-day progress documentation
+
+📚 Documentation by Day
+
+Each day of work is documented in the days/ folder with its own README file.
+
+days/day0/README.md: Project initialization, backend/frontend scaffolding, and OpenSearch setup.
+
+📦 Getting Started
+
+Clone the repository and install dependencies in both frontend and backend folders:
 ```bash
-git clone https://github.com/<you>/ts-fullstack-lab.git
+git clone <your-repo-url>
 cd ts-fullstack-lab
-npm install --workspaces          # installs backend & frontend
-
-# OpenSearch
+cd backend && npm install
+cd ../frontend && npm install
+```
+To run the OpenSearch service:
+```bash
 docker compose up -d
-docker compose logs -f opensearch | grep -m1 "Node started"
+```
+To start development servers:
+```bash
+# In backend
+npm run start:dev
 
-# Dev servers
-npm --workspace backend  run start:dev   # http://localhost:3000
-npm --workspace frontend run start:dev   # http://localhost:5173
+# In frontend
+npm run start:dev
+```
+🔐 Notes
 
-# Verify search node
-curl -k -u admin:Str0ngP@ssw0rd! https://localhost:9200
-Credentials (development)
-user	password
-admin	Str0ngP@ssw0rd!
+OpenSearch is configured with security enabled and basic auth (dev-only).
 
-(Self-signed TLS; client uses rejectUnauthorized: false.)
+rejectUnauthorized: false is used to allow self-signed certs in local development.
 
-Directory Layout
-arduino
-Copy
-Edit
-.
-├─ backend/        NestJS service
-│  └─ src/
-│     └─ opensearch.client.ts
-├─ frontend/       React + Vite app
-├─ docker-compose.yml
-├─ tsconfig.base.json
-└─ eslint.config.mjs
-Common Scripts
-Script (root)	Purpose
-npm run lint	ESLint + Prettier
-npm --workspace backend run start:dev	API dev server
-npm --workspace frontend run start:dev	UI dev server
+ESLint rules are relaxed in specific files to accommodate integration edge cases.
 
-License
-MIT
+📌 Goals
+
+This project provides a clean environment to:
+
+Learn TypeScript in both backend and frontend contexts.
+
+Practice building and connecting REST APIs.
+
+Understand tooling like Vite, NestJS, Docker, and OpenSearch.
+
+Each day I can build on what I learn.
+
+📬 Feedback & Iteration
+
+This repository is a work in progress. Future improvements may include:
+
+Unit and integration testing setup
+
+Advanced API design
+
+OpenSearch queries and mappings
+
+See individual progression/dayX.md files for detailed task documentation.
