@@ -36,6 +36,12 @@ enum Language { ES = 'es', EN = 'en' }
 const current: Language = Language.EN;
 ```
 
+test it with:
+```bash
+npx tsc everyday-types-demo.ts --noEmit
+npx ts-node everyday-types-demo.ts
+```
+
 **Learned:**
 
 -   How to use primitive types explicitly (`string`, `number`, `boolean`).
