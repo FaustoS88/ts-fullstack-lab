@@ -33,7 +33,7 @@ ts-fullstack-lab/
 
 Each day of work is documented in the `days/` folder with its own README file.
 
--   [`days/day0/README.md`](ts-fullstack-lab/days/DAY0.md): Project initialization, backend/frontend scaffolding, and OpenSearch setup.
+-   [`days/day0.md`](ts-fullstack-lab/days/DAY0.md): Project initialization, backend/frontend scaffolding, and OpenSearch setup.
 
 ---
 
@@ -41,14 +41,14 @@ Each day of work is documented in the `days/` folder with its own README file.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/FaustoS88/ts-fullstack-lab.git
     cd ts-fullstack-lab
     ```
 
 2.  **Install dependencies:**
     Navigate to both `backend` and `frontend` directories and install their respective dependencies:
     ```bash
-    cd backend
+    cd backend  
     npm install
     cd ../frontend
     npm install
