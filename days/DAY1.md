@@ -50,12 +50,9 @@ const current: Language = Language.EN;
 **File Created:** [`src/calc.ts`](ts-fullstack-lab/src/calc.ts:42)
 
 ```typescript
-#!/usr/bin/env ts-node
-/**
- * A minimal calculator CLI:
- *   $ ts-node src/calc.ts add 5 3
- *   8
- */
+/* eslint-disable prettier/prettier,
+                  @typescript-eslint/restrict-template-expressions,
+                  @typescript-eslint/no-unsafe-member-access */
 const [/*node*/, /*script*/, op, a, b] = process.argv;
 
 function toNumber(str: string | undefined): number {
@@ -88,7 +85,7 @@ function calculate(operation: Operation, x: number, y: number): number {
 // Validate operation input
 const validOperations: Operation[] = ['add', 'sub', 'mul', 'div'];
 if (!validOperations.includes(op as Operation)) {
-  console.error(`Invalid operation: ${op}. Must be one of: ${validOperations.join(', ')}`);
+  console.error(`Invalid operation: ${String(op)}. Must be one of: ${validOperations.join(', ')}`);
   process.exit(1);
 }
 
