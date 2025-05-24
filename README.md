@@ -99,4 +99,4 @@ This repository is an ongoing work in progress. Future improvements may include:
 -   Advanced API design patterns.
 -   Detailed OpenSearch queries and mappings.
 
-For detailed task documentation, please refer to the individual `progression/dayX.md` files.
+For detailed task documentation, please refer to the individual `days/dayX.md` files.
