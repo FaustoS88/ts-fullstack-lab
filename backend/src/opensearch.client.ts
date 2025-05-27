@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access,
-                  @typescript-eslint/no-unsafe-assignment,
-                  prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Client } from '@opensearch-project/opensearch';
 
 export const osClient = new Client({

@@ -1,5 +1,4 @@
-/* eslint-disable prettier/prettier,
-                  @typescript-eslint/restrict-template-expressions,
+/* eslint-disable @typescript-eslint/restrict-template-expressions,
                   @typescript-eslint/no-unsafe-member-access */
 const [, , /*node*/ /*script*/ op, a, b] = process.argv;
 
