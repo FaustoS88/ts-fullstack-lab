@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   opensearch:
-    image: opensearchproject/opensearch:2.13.0
+    image: my-opensearch-ingest:latest
     environment:
       - discovery.type=single-node
       - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Str0ngP@ssw0rd!

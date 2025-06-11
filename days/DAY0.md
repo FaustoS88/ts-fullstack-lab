@@ -69,16 +69,19 @@ This file provides common compiler options for both backend and frontend project
 npx @nestjs/cli new backend --strict
 cd backend
 npm i -D ts-node-dev # Install ts-node-dev for development
+npm install class-validator class-transformer reflect-metadata  # This brings in runtime decorators and type metadata needed for Nest’s ValidationPipe
 ```
 
 **Configure TypeScript for Backend (`backend/tsconfig.json`):**
 
-Extend the base configuration and specify NodeNext module settings.
+Extend the base configuration and specify NodeNext module settings (and enable decorators).
 
 ```json
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,   
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "rootDir": "src",
