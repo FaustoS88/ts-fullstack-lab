@@ -33,10 +33,10 @@ ts-fullstack-lab/
 
 Each day of work is documented in the `days/` folder with its own README file.
 
--   [`days/day0.md`](ts-fullstack-lab/days/DAY0.md): Project initialization, backend/frontend scaffolding, and OpenSearch setup.
--   [`days/day1.md`](ts-fullstack-lab/days/DAY1.md): Everyday types practice and a simple CLI calculator.
--   [`days/day2.md`](ts-fullstack-lab/days/DAY2.md): Generics, utility types, and `fetch` demonstrations.
--   [`days/day3.md`](ts-fullstack-lab/days/DAY3.md): Basic Nest search endpoint consumed from React.
+-   [`days/DAY0.md`](ts-fullstack-lab/days/DAY0.md): Project initialization, backend/frontend scaffolding, and OpenSearch setup.
+-   [`days/DAY1.md`](ts-fullstack-lab/days/DAY1.md): Everyday types practice and a simple CLI calculator.
+-   [`days/DAY2.md`](ts-fullstack-lab/days/DAY2.md): Generics, utility types, and `fetch` demonstrations.
+-   [`days/DAY3.md`](ts-fullstack-lab/days/DAY3.md): Basic Nest search endpoint consumed from React.
 
 ---
 
